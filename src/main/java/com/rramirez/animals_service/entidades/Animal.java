@@ -10,7 +10,7 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private UUID id;
+    private Long id;
     @Column(nullable = false)
     private String nomeProvisorio;
     @Column(nullable = false)
@@ -18,7 +18,7 @@ public class Animal {
     @Column(nullable = false)
     private String raca;
     @Column(nullable = false)
-    private Date daaEntrada;
+    private Date dataEntrada;
     private Date dataAdocao;
     @Column(nullable = false)
     private String condicoesChegada;
@@ -29,7 +29,7 @@ public class Animal {
     private String porte;
 
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
@@ -57,12 +57,12 @@ public class Animal {
         this.raca = raca;
     }
 
-    public Date getDaaEntrada() {
-        return daaEntrada;
+    public Date getDataEntrada() {
+        return dataEntrada;
     }
 
-    public void setDaaEntrada(Date daaEntrada) {
-        this.daaEntrada = daaEntrada;
+    public void setDaaEntrada(Date dataEntrada) {
+        this.dataEntrada = dataEntrada;
     }
 
     public Date getDataAdocao() {

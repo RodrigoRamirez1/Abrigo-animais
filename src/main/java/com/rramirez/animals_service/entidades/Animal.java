@@ -11,6 +11,9 @@ public class Animal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Long id;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TipoAnimal tipoAnimal;
     @Column(nullable = false)
     private String nomeProvisorio;
     @Column(nullable = false)
@@ -31,6 +34,14 @@ public class Animal {
 
     public Long getId() {
         return id;
+    }
+
+    public TipoAnimal getTipoAnimal() {
+        return tipoAnimal;
+    }
+
+    public void setTipoAnimal(TipoAnimal tipoAnimal) {
+        this.tipoAnimal = tipoAnimal;
     }
 
     public String getNomeProvisorio() {
